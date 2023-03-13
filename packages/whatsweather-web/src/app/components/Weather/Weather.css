@@ -1,0 +1,67 @@
+p {
+    margin: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.location-weather,.hourly-weather{
+    padding: 20px;
+}
+
+.hourly-card{
+    margin: 0 0 20px 0;
+}
+
+.hourly-card .ant-card-body{
+    height: 144px;
+}
+
+.hourly-card-content{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hourly-card-temp {
+    padding: 5px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.hourly-card-condition {
+    padding: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    width: 150px;
+}
+
+.daily-card-content{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.daily-card-temp {
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.daily-card-condition {
+    padding: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 250px;
+}
+
+.daily-card-condition img{
+    width: 100px;
+}

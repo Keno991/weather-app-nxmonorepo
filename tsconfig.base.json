@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@whatsweather/dtos": ["packages/dtos/src/index.ts"],
+      "@controller/*": ["packages/whatsweather-api/src/controllers/*"],
+      "@service/*": ["packages/whatsweather-api/src/services/*"],
+      "@exceptions": ["packages/whatsweather-api/src/utils/exceptions/index"],
+      "@repository/*": ["packages/whatsweather-api/src/repositories/*"],
+      "@dto/*": ["packages/whatsweather-api/src/types/dtos/*"],
+      "@enums/*": ["packages/whatsweather-api/src/types/enums/*"],
+      "@interfaces/*": ["packages/whatsweather-api/src/types/interfaces/*"],
+      "@entity/*": ["packages/whatsweather-api/src/database/entities/*"],
+      "@middleware/*": ["packages/whatsweather-api/src/middleware/*"],
+      "@lib/*": ["packages/whatsweather-api/src/lib/*"],
+      "@routes": ["packages/whatsweather-api/src/routes/index"],
+      "@utils/*": ["packages/whatsweather-api/src/utils/*"],
+      "@env": ["packages/whatsweather-api/src/utils/env.util"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

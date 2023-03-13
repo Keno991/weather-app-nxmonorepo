@@ -1,0 +1,64 @@
+{
+  "name": "whatsweather-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/whatsweather-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/packages/whatsweather-api",
+        "main": "packages/whatsweather-api/src/server.ts",
+        "tsConfig": "packages/whatsweather-api/tsconfig.app.json",
+        "assets": ["packages/whatsweather-api/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "packages/whatsweather-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "whatsweather-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "whatsweather-api:build:development"
+        },
+        "production": {
+          "buildTarget": "whatsweather-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/whatsweather-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/whatsweather-api/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
