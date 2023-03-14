@@ -14,10 +14,10 @@ services:
   whatsweather-api:
     extends:
       file: docker-compose.base.yml
-      service: nx-app-base
+      service: nx-api-base
     command: npm run whatsweather-api:dev:docker
     ports:
       - 3000:3000 # API Entry port
       - 3001:3001 # Server Debugging port
 volumes:
-  mono-node-modules: null
+  mono-node-modules:

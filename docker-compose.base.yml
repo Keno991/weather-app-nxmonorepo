@@ -11,3 +11,12 @@ services:
     volumes:
       - ./:/app
       - mono-node-modules:/app/node_modules
+  nx-api-base:
+    restart: always
+    build:
+      context: .
+    environment:
+      - DEV_PLATFORM=DOCKER
+    volumes:
+      - ./:/app
+      - mono-node-modules:/app/node_modules
