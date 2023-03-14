@@ -7,7 +7,7 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/whatsweather-web',
 
   server: {
-    port: 4200,
+    port: 3002,
     host: 'localhost',
     fs: {
       allow: [
@@ -18,7 +18,7 @@ export default defineConfig({
   },
 
   preview: {
-    port: 4300,
+    port: 3002,
     host: 'localhost',
   },
 

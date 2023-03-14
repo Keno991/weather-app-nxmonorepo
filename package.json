@@ -2,7 +2,10 @@
   "name": "whatsweather",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "whatsweather-web:dev:docker": "nx serve whatsweather-web --host=0.0.0.0",
+    "whatsweather-api:dev:docker": "nx serve whatsweather-api --host=0.0.0.0 --port=3001"
+  },
   "private": true,
   "dependencies": {
     "antd": "^5.2.3",
