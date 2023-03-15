@@ -25,7 +25,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "whatsweather-web:build",
-        "proxyConfig": "packages/whatsweather-web/proxy.conf.json"
+        "proxyConfig": "packages/whatsweather-web/proxy.conf.json",
+        "poll": 1000
       },
       "configurations": {
         "development": {
